@@ -1,1 +1,1 @@
-BB_DATASET_PATH = 'fsoco/fsoco_bounding_boxes_train'
+BB_DATASET_PATH = '/path/to/fsoco_bounding_boxes_train'
