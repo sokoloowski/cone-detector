@@ -1,5 +1,7 @@
 from matplotlib.patches import Rectangle
 import os, json
+
+
 if os.path.exists('config/localconfig.py'):
     from config import localconfig as config
 else:
@@ -18,4 +20,3 @@ def draw_bounding_box(object):
     h = pos[1][1] - pos[0][1]
     obj_class = get_class(object['classId'])
     return Rectangle((pos[0][0], pos[0][1]), w, h, linewidth=1, edgecolor=obj_class['color'], facecolor='none')
-    
