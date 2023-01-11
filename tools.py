@@ -1,11 +1,11 @@
 from matplotlib.patches import Rectangle
 import os, json
 
-
 if os.path.exists('config/localconfig.py'):
     from config import localconfig as config
 else:
     from config import config
+
 
 def get_class(id):
     with open(os.path.join(config.BB_DATASET_PATH, 'meta.json')) as f:
@@ -13,6 +13,7 @@ def get_class(id):
     if id == 'all':
         return cone_classes
     return [x for x in filter(lambda x: x['id'] == id, cone_classes)][0]
+
 
 def draw_bounding_box(object):
     pos = object['points']['exterior']

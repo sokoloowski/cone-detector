@@ -2,6 +2,7 @@ import tensorflow as tf
 from keras import layers
 from hyperparameters import *
 
+
 class Patches(layers.Layer):
     def __init__(self, patch_size):
         super().__init__()
@@ -35,6 +36,7 @@ class Patches(layers.Layer):
         )
         # return patches
         return tf.reshape(patches, [batch_size, -1, patches.shape[-1]])
+
 
 class PatchEncoder(layers.Layer):
     def __init__(self, num_patches, projection_dim):
