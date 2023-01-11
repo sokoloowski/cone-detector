@@ -1,5 +1,6 @@
+num_classes = 5
 image_size = 224
-patch_size = 32
+patch_size = 16
 input_shape = (image_size, image_size, 3)  # input image shape
 learning_rate = 0.001
 weight_decay = 0.0001
