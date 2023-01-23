@@ -41,13 +41,8 @@ for i in range(size):
         targets.append(cone['class'])
 
 # %%
-import pandas as pd
-
-targets = pd.get_dummies(targets)
-
-# %%
-classes = targets.columns
-targets = targets.values
+classes = ['unknown_cone', 'yellow_cone', 'blue_cone', 'orange_cone', 'large_orange_cone']
+targets = [classes.index(x) for x in targets]
 
 # %%
 import pickle
