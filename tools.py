@@ -12,12 +12,12 @@ def get_class(id):
         cone_classes = json.load(f)['classes']
     if id == 'all':
         return cone_classes
-    return [x for x in filter(lambda x: x['id'] == id, cone_classes)][0]
+    return [x for x in filter(lambda x: x['title'] == id, cone_classes)][0]
 
 
 def draw_bounding_box(object):
     pos = object['points']['exterior']
     w = pos[1][0] - pos[0][0]
     h = pos[1][1] - pos[0][1]
-    obj_class = get_class(object['classId'])
+    obj_class = get_class(object['classTitle'])
     return Rectangle((pos[0][0], pos[0][1]), w, h, linewidth=1, edgecolor=obj_class['color'], facecolor='none')
