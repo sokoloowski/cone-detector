@@ -3,4 +3,4 @@ __pycache__/
 fsoco/
 logs/
 localconfig.py
-*.h5
+*.pkl
