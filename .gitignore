@@ -4,3 +4,6 @@ fsoco/
 logs/
 localconfig.py
 *.pkl
+.idea/
+vit_object_detector.h5
+vit_object_detector_1673457281.h5
